@@ -8,6 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/humps": "^2.0.1",
+    "@types/js-cookie": "^3.0.1",
+    "axios": "^0.26.1",
+    "element-plus": "^2.1.9",
+    "humps": "^2.0.1",
+    "js-cookie": "^3.0.1",
+    "loglevel": "^1.8.0",
+    "sass": "^1.50.0",
     "vue": "^3.2.25"
   },
   "devDependencies": {
