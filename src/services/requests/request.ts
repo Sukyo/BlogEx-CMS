@@ -1,8 +1,8 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, CancelTokenSource, AxiosStatic } from 'axios';
-import { RequestOptions } from './types';
+import { RequestOptions, InterceptorRequest } from './types';
 import { DEFAULT_REQUEST_OPTIONS, DEFAULT_REQUEST_CONFIG } from './constants';
 import { RequestError } from './error';
-
+import { ElMessage } from 'element-plus';
 /**
  * 设置拦截器
  * @param instance
@@ -13,14 +13,11 @@ export function setInterceptors<T>(
   interceptors: RequestOptions<T>['interceptors'],
 ): void {
   if (interceptors && Array.isArray(interceptors.request) && interceptors.request.length > 0) {
-    const beforeRequestHandlers = interceptors.request.reverse();
+    const beforeRequestHandlers = interceptors.request.reverse(); // 拦截器是unshift到handleChain里的, axios执行时是倒序执行
     beforeRequestHandlers.forEach((interceptor) => {
+      // if判断是数组让ts不报错
       if (Array.isArray(interceptor) && interceptor.length > 0) {
         instance.interceptors.request.use(...interceptor);
-        return;
-      }
-      if (interceptor && typeof interceptor === 'function') {
-        instance.interceptors.request.use(interceptor, error => Promise.reject(error));
       }
     });
   }
@@ -29,10 +26,6 @@ export function setInterceptors<T>(
     interceptors.response.forEach((interceptor) => {
       if (Array.isArray(interceptor) && interceptor.length > 0) {
         instance.interceptors.response.use(...interceptor);
-        return;
-      }
-      if (interceptor && typeof interceptor === 'function') {
-        instance.interceptors.response.use(interceptor, error => Promise.reject(error));
       }
     });
   }
@@ -126,8 +119,13 @@ export class Request<T, R = T> {
       this.response = await this.instance.request<T, AxiosResponse<R>>(this.config);
       this.data = this.response.data;
     } catch (error: any) {
+      ElMessage({
+        type: 'error',
+        message: error.msg || '当前网络连接错误，请重试',
+        duration: 5000
+      })
       this.error = error;
-      throw new RequestError(error.code || 99999, error.message || '当前网络连接错误，请重试', error.response);
+      throw new RequestError(error.code || 99999, error.msg || '当前网络连接错误，请重试');
     }
     this.cancel();
     this.loading = false;

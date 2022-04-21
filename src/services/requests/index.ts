@@ -12,15 +12,14 @@ export async function request<T, R = T>(
   config: AxiosRequestConfig,
   options: RequestOptions<T> = DEFAULT_REQUEST_OPTIONS,
 ): Promise<Request<T, R>> {
-  console.log(config)
   const service = new Request<T, R>(config, {
     ...DEFAULT_REQUEST_OPTIONS,
     ...options,
   });
-
+  // 如果是手动调用 则直接返回
   if (options.manual) {
     return service;
   }
-  await service.run();
+  await service.run(); // 执行请求
   return service;
 }

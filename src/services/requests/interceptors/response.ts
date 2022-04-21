@@ -1,6 +1,6 @@
-import { AxiosResponse } from 'axios';
+import { AxiosResponse, AxiosError } from 'axios';
 import { camelizeKeys } from 'humps';
-import { InterceptorResponse, ResponseResultCode } from '../types';
+import { InterceptorRejected, InterceptorResponse, ResponseResultCode } from '../types';
 // import router from '@/router/index';
 import Cookies from 'js-cookie';
 
@@ -11,21 +11,26 @@ const RESPONSE_INTECEPTORS: {
   response: InterceptorResponse
 } = {
   response: [
-    (response: AxiosResponse): AxiosResponse => {
-      const { code } = response.data;
-      if (code === ResponseResultCode.UNAUTHORIZED) {
-        Cookies.remove('token');
-        localStorage.removeItem('token');
-        // router.push({ name: 'Login' });
+    [
+      (response: AxiosResponse): AxiosResponse => {
+        const { code } = response.data;
+        if (code === ResponseResultCode.UNAUTHORIZED) {
+          Cookies.remove('token');
+          localStorage.removeItem('token');
+          // router.push({ name: 'Login' });
+        }
+        const camelizeData = camelizeKeys(response.data);
+        return {
+          ...response,
+          data: {
+            ...camelizeData,
+          },
+        };
+      },
+      (error: AxiosError): Promise<AxiosError> => {
+        return Promise.reject(error);
       }
-      const camelizeData = camelizeKeys(response.data);
-      return {
-        ...response,
-        data: {
-          ...camelizeData,
-        },
-      };
-    },
-  ],
+    ]
+  ]
 };
 export { RESPONSE_INTECEPTORS }

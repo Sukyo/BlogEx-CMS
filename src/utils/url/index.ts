@@ -21,7 +21,6 @@ export function removeHttp(src: string): string {
 export function getQueryVariable(variable: string): string {
   const query = window.location.hash.substring(1);
   const vars = query.split('&');
-  // eslint-disable-next-line @typescript-eslint/prefer-for-of
   for (let i = 0; i < vars.length; i++) {
     const pair = vars[i].split('=');
     if (pair[0] === variable) {

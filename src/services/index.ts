@@ -1,2 +1,1 @@
-import { request } from './requests'
-export { request }
+export { request } from './requests'

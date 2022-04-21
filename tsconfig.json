@@ -13,11 +13,14 @@
     "sourceMap": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
+    "typeRoots": [
+      "types/*"
+    ],
     "types": [
       "element-plus/global"
     ],
     "paths": {
-      "@/*": [
+      "blogex-cms/*": [
         "src/*"
       ]
     },
@@ -40,6 +43,7 @@
     "src/**/*.ts"
   ],
   "exclude": [
+    "lib",
     "node_modules"
   ]
 }

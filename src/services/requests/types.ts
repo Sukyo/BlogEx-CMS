@@ -1,21 +1,26 @@
+import { RequestError } from './error';
 import { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 /** 拦截器实现方法 */
 type InterceptorFulfilled<T> = (value: T) => T | Promise<T>;
 
 /** 拦截器错误兜底 */
-type InterceptorRejected = (error: unknown) => unknown;
+type InterceptorRejected = (error: AxiosError) => Promise<AxiosError>;
 
 /** 拦截器管理器 */
 type InterceptorManager<T> = [InterceptorFulfilled<T>, InterceptorRejected];
 
 /** 请求拦截 */
-type InterceptorRequest = Array<InterceptorManager<AxiosRequestConfig>
-  | InterceptorFulfilled<AxiosRequestConfig>>;
+type InterceptorRequest = Array<InterceptorManager<AxiosRequestConfig>> | InterceptorManager<AxiosRequestConfig>;
 
 /** 响应拦截 */
-type InterceptorResponse = Array<InterceptorManager<AxiosResponse> | InterceptorFulfilled<AxiosResponse>>;
+type InterceptorResponse = Array<InterceptorManager<AxiosResponse>> | InterceptorManager<AxiosResponse>;
+// /** 请求拦截 */
+// type InterceptorRequest = Array<InterceptorManager<AxiosRequestConfig>
+//   | InterceptorFulfilled<AxiosRequestConfig>>;
 
+// /** 响应拦截 */
+// type InterceptorResponse = Array<InterceptorManager<AxiosResponse> | InterceptorFulfilled<AxiosResponse>>;
 /** 请求选项 */
 interface RequestOptions<T> {
   /** 手动触发请求 */

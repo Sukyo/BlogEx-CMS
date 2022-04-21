@@ -34,7 +34,7 @@ const DEFAULT_REQUEST_OPTIONS = {
  * @description 默认请求配置
  */
 const DEFAULT_REQUEST_CONFIG: AxiosRequestConfig = {
-  baseURL: 'http://spzgczyj.top:20010/api',
+  baseURL: '/api',
   timeout: 10000, // 10秒请求超时
   method: 'GET', // 默认GET请求
   withCredentials: true, // 默认携带cookie
