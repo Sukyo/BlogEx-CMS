@@ -1,0 +1,174 @@
+{
+	"Version": 3,
+	"Meta": {
+		"Duration": 2.667,
+		"Fps": 30.0,
+		"Loop": true,
+		"AreBeziersRestricted": true,
+		"CurveCount": 9,
+		"TotalSegmentCount": 18,
+		"TotalPointCount": 43,
+		"UserDataCount": 0,
+		"TotalUserDataSize": 0
+	},
+	"Curves": [
+		{
+			"Target": "Parameter",
+			"Id": "ParamAngleX",
+			"Segments": [
+				0,
+				0,
+				1,
+				0.222,
+				0,
+				0.444,
+				-10,
+				0.667,
+				-10,
+				0,
+				2.667,
+				-10
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Id": "ParamAngleY",
+			"Segments": [
+				0,
+				0,
+				1,
+				0.222,
+				0,
+				0.444,
+				2,
+				0.667,
+				2,
+				0,
+				2.667,
+				2
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Id": "ParamAngleZ",
+			"Segments": [
+				0,
+				0,
+				1,
+				0.222,
+				0,
+				0.444,
+				-22,
+				0.667,
+				-22,
+				0,
+				2.667,
+				-22
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Id": "ParamEyeLOpen",
+			"Segments": [
+				0,
+				1,
+				1,
+				0.222,
+				1,
+				0.444,
+				0.8,
+				0.667,
+				0.8,
+				0,
+				2.633,
+				0.8,
+				0,
+				2.667,
+				0.8
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Id": "ParamEyeROpen",
+			"Segments": [
+				0,
+				1,
+				1,
+				0.222,
+				1,
+				0.444,
+				0.8,
+				0.667,
+				0.8,
+				0,
+				2.633,
+				0.8,
+				0,
+				2.667,
+				0.8
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Id": "ParamMouthForm",
+			"Segments": [
+				0,
+				0,
+				1,
+				0.222,
+				0,
+				0.444,
+				0.4,
+				0.667,
+				0.4,
+				0,
+				2.667,
+				0.4
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Id": "ParamMouthOpenY",
+			"Segments": [
+				0,
+				0,
+				0,
+				2.667,
+				0
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Id": "Param20",
+			"Segments": [
+				0,
+				-0.6,
+				0,
+				2.667,
+				-0.6
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Id": "ParamBreath",
+			"Segments": [
+				0,
+				0,
+				1,
+				0.444,
+				0,
+				0.889,
+				1,
+				1.333,
+				1,
+				1,
+				1.778,
+				1,
+				2.222,
+				0,
+				2.667,
+				0
+			]
+		}
+	]
+}

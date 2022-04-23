@@ -2,7 +2,7 @@ import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, Ca
 import { RequestOptions, InterceptorRequest } from './types';
 import { DEFAULT_REQUEST_OPTIONS, DEFAULT_REQUEST_CONFIG } from './constants';
 import { RequestError } from './error';
-import { ElMessage } from 'element-plus';
+import { ElLoading, ElMessage } from 'element-plus';
 /**
  * 设置拦截器
  * @param instance

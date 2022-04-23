@@ -1,0 +1,49 @@
+{
+  "modelList": [
+    {
+      "modelPath": "./live2d/model/aa12_2403/aa12_2403.model.json",
+      "bgUrl":"./bg/live2dBg1.gif"
+    },    
+    {
+      "modelPath": "./live2d/model/Pio/animal-costume.json",
+      "bgUrl":"./bg/live2dBg2.gif"
+    },    
+    {
+      "modelPath": "./live2d/model/kesshouban/model.json",
+      "bgUrl":"./bg/live2dBg3.gif"
+    },
+    {
+      "modelPath": "./live2d/model/dsr50_2101/dsr50_2101.model.json"
+    },
+    {
+      "modelPath": "./live2d/model/ots14_3001/ots14_3001.model.json"
+    },
+    {
+      "modelPath": "./live2d/model/95type_405/95type_405.model.json"
+    },
+    {
+      "modelPath": "./live2d/model/HyperdimensionNeptunia/nepgear/nepgear.model.json",
+      "modelName": "海王星系列-JK少女",
+      "bgUrl":"./bg/live2dBg4.gif"
+    },
+    {
+      "modelPath": "./live2d/model/HyperdimensionNeptunia/nepmaid/nepmaid.model.json",
+      "modelName": "海王星系列-女仆",
+      "bgUrl":"./bg/live2dBg5.gif"
+    },
+    {
+      "modelPath": "./live2d/model/Terisa/model.json",
+      "bgUrl":"./bg/live2dBg6.gif"
+    },
+    {
+      "modelPath": "./live2d/model/k2_3301/k2_3301.model.json"
+    },
+    {
+      "modelPath": "./live2d/model/kp31_3101/kp31_3101.model.json"
+    },
+    {
+      "modelPath": "./live2d/model/Pio/animal-costume-racoon.json",
+      "bgUrl":"./bg/live2dBg7.gif"
+    }
+  ]
+}

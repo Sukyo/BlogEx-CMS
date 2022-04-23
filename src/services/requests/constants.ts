@@ -29,13 +29,12 @@ const DEFAULT_REQUEST_OPTIONS = {
     response: RESPONSE_INTECEPTORS.response,
   },
 };
-
+// 根据当前环境配置baseurl
 /**
  * @description 默认请求配置
  */
 const DEFAULT_REQUEST_CONFIG: AxiosRequestConfig = {
-  baseURL: '/api',
-  timeout: 10000, // 10秒请求超时
+  timeout: 20000, // 20秒请求超时
   method: 'GET', // 默认GET请求
   withCredentials: true, // 默认携带cookie
 };

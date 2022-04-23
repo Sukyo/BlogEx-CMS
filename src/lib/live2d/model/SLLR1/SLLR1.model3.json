@@ -1,0 +1,132 @@
+{
+  "Version": 3,
+  "Type": 0,
+  "Bounds": {
+    "Width": 8.0,
+    "Height": 7.5,
+    "CenterX": 0.0,
+    "CenterY": 1.5
+  },
+  "FileReferences": {
+    "Moc": "SLLR1.moc3",
+    "Textures": [
+      "SLLR1.4096/texture_00.png"
+    ],
+    "Physics": "SLLR1.physics3.json",
+    "PhysicsV2": {
+      "File": "SLLR1.physics3.json"
+    },
+    "Motions": {
+      "Start": [
+        {
+          "File": "SLLR-问候.motion3.json",
+          "Sound": "SSLR-1.wav",
+		  "Text": "此前听绫华屡次提起阁下，不料公务繁忙，直至今日才有机会相见。神里家家主，神里绫人，今后请多指教了。"
+        }
+      ],
+      "Tap观点": [
+        {
+          "File": "SLLR-观点.motion3.json",
+          "Sound": "SSLR-2.wav",
+		  "Text": "大多数人会因为大风迷眼而止步不前，只有少部分人能够借势而为。 "
+        }
+      ],
+      "Tap宠物": [
+        {
+          "File": "SLLR-宠物.motion3.json",
+          "Sound": "SSLR-3.wav",
+		  "Text": "说起宠物的话，嗯，我更喜欢狗。猫自我主义的特征是不错，但只有狗会乖乖听从主人的命令。忠诚而又坦率，呵，真是惹人喜爱啊。"
+        }
+      ],
+      "Tap问候": [
+        {
+          "File": "SLLR-问候.motion3.json",
+          "Sound": "SSLR-1.wav",
+		  "Text": "此前听绫华屡次提起阁下，不料公务繁忙，直至今日才有机会相见。神里家家主，神里绫人，今后请多指教了。"
+        }
+      ]
+    }
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Items": [
+        {
+          "Id": "ParamEyeLOpen",
+          "Min": 0.0,
+          "Max": 1.0,
+          "BlendMode": 2,
+          "Input": 0
+        },
+        {
+          "Id": "ParamEyeROpen",
+          "Min": 0.0,
+          "Max": 1.0,
+          "BlendMode": 2,
+          "Input": 0
+        }
+      ],
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0,
+      "Items": [
+        {
+          "Id": "ParamMouthOpenY",
+          "Min": 0.0,
+          "Max": 1.0,
+          "Input": 0
+        }
+      ]
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "观点",
+      "Id": "ArtMesh12"
+    },
+    {
+      "Name": "宠物",
+      "Id": "ArtMesh65"
+    },
+    {
+      "Name": "问候",
+      "Id": "ArtMesh58"
+    }
+  ],
+  "Options": {}
+}

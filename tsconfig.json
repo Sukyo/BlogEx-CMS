@@ -13,17 +13,18 @@
     "sourceMap": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
+    "paths": {
+      "blogex-cms/*": [
+        "src/*"
+      ],
+    },
     "typeRoots": [
       "types/*"
     ],
     "types": [
+      "node",
       "element-plus/global"
     ],
-    "paths": {
-      "blogex-cms/*": [
-        "src/*"
-      ]
-    },
     "lib": [
       "esnext",
       "dom",
@@ -38,9 +39,11 @@
   ],
   "include": [
     "**/**/*.ts",
+    "**/**/*.d.ts",
     "**/**/*.vue",
     "**/**/*.tsx",
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "vite.config.ts"
   ],
   "exclude": [
     "lib",

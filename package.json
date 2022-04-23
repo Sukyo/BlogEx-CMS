@@ -10,11 +10,15 @@
   "dependencies": {
     "@types/humps": "^2.0.1",
     "@types/js-cookie": "^3.0.1",
+    "amfe-flexible": "^2.2.1",
+    "autoprefixer": "^10.4.4",
     "axios": "^0.26.1",
     "element-plus": "^2.1.9",
     "humps": "^2.0.1",
     "js-cookie": "^3.0.1",
     "loglevel": "^1.8.0",
+    "pinia": "^2.0.13",
+    "postcss-pxtorem": "^6.0.0",
     "sass": "^1.50.0",
     "vue": "^3.2.25",
     "vue-router": "4"

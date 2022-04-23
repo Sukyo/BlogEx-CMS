@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- <link rel="stylesheet" href="src/lib/live2d/css/live2d.css" /> -->
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app">
+  </div>
+  <!-- <div id="landlord">
+    <div id="live2d-tips" class="live2d-tips" style="opacity: 1;"></div>
+    <canvas id="live2d" width="250" height="250" class="live2d"></canvas>
+    <div class="live2d-tool">
+      <span class="fui-home"></span>
+      <span class="fui-eye"></span>
+      <span class="fui-chat"></span>
+      <span class="fui-user"></span>
+      <span class="fui-photo"></span>
+      <span class="fui-cross"></span>
+    </div>
+  </div> -->
+  <script type="module" src="/src/main.ts"></script>
+  <!-- <script src="/src/lib/live2d/js/live2dcubismcore.js"></script>
+  <script src="/src/lib/live2d/js/live2dmoc3.js"></script>
+  <script type="text/javascript">
+    const landlordDom = document.querySelector('#landlord');
+    landlordDom.style.backgroundImage = "url('src/assets/bg/live2dBg6.gif')";
+    landlordDom.classList.add('bgDiv');
+    let tmpModelDir = [];
+    var backImageName = ''; // 指定背景图片
+    var modelDir = ['xukufu_3_hx', 'WY3.1', 'SLRL1', 'wuqi_2']; // 指定需要加载的模型
+    var modelScale = 2.0; //缩放大小
+    var resourcesPath = 'src/lib/live2d/model/'; // 指定资源文件（模型）保存的路径
+    tmpModelDir.push(modelDir[0]);
+    initDefine(resourcesPath, backImageName, tmpModelDir, modelScale); // 初始化模型
+    startRunModel();
+
+  </script> -->
+</body>
+
 </html>

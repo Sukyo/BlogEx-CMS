@@ -1,0 +1,129 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "WY3.1.moc3",
+    "Textures": [
+      "WY3.1.4096/texture_00.png"
+    ],
+    "Physics": "WY3.1.physics3.json",
+    "PhysicsV2": {
+      "File": "WY3.1.physics3.json"
+    },
+    "Motions": {
+      "Tap冥想": [
+        {
+          "File": "WY-冥想.motion3.json",
+        }
+      ],
+      "Tap微笑": [
+        {
+          "File": "WY-微笑.motion3.json",
+          "Sound": "愉快.mp3",
+		  "Text": "晴空万里，真让人心情愉快"
+        }
+      ],
+      "Tap屑眼神": [
+        {
+          "File": "WY-屑眼神.motion3.json"
+        }
+      ],
+      "Tap归零": [
+        {
+          "File": "WY-归零.motion3.json",
+        }
+      ],
+      "Tap摇头": [
+        {
+          "File": "WY-摇头.motion3.json",
+		  "Sound": "夜晚.mp3",
+		  "Text": "抬头见月，侧耳听风，壶中有酒，我心太平… 呵，晚上好"
+        }
+      ],
+      "Shake": [
+        {
+          "File": "WY-摇头.motion3.json"
+        }
+      ]
+    }
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Items": [
+        {
+          "Id": "ParamEyeLOpen",
+          "Min": 0.0,
+          "Max": 1.0,
+          "BlendMode": 2,
+          "Input": 0
+        },
+        {
+          "Id": "ParamEyeROpen",
+          "Min": 0.0,
+          "Max": 1.0,
+          "BlendMode": 2,
+          "Input": 0
+        }
+      ],
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "冥想",
+      "Id": "ArtMesh5"
+    },
+    {
+      "Name": "微笑",
+      "Id": "ArtMesh7"
+    },
+    {
+      "Name": "屑眼神",
+      "Id": "ArtMesh9"
+    },
+    {
+      "Name": "归零",
+      "Id": "ArtMesh38"
+    },
+    {
+      "Name": "摇头",
+      "Id": "ArtMesh50"
+    }
+  ],
+  "Options": {}
+}

@@ -1,0 +1,34 @@
+{
+  "Tap冥想": [
+    {
+      "file": "WY-冥想.motion3.json",
+      "sound": "夜晚.mp3"
+    }
+  ],
+  "Tap微笑": [
+    {
+      "file": "WY-微笑.motion3.json",
+      "sound": "愉快.mp3"
+    }
+  ],
+  "Tap屑眼神": [
+    {
+      "file": "WY-屑眼神.motion3.json"
+    }
+  ],
+  "Tap归零": [
+    {
+      "file": "WY-归零.motion3.json"
+    }
+  ],
+  "Tap摇头": [
+    {
+      "file": "WY-摇头.motion3.json"
+    }
+  ],
+  "Shake": [
+    {
+      "file": "WY-摇头.motion3.json"
+    }
+  ]
+}

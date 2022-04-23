@@ -67,7 +67,12 @@ type Response<T, R = ResponseResultCode> = {
   /** 返回信息 */
   message: string
 } & T;
-
+// 响应体
+export interface ResultInterface<T> {
+  code: number,
+  msg: string,
+  data: T
+}
 export {
   InterceptorFulfilled,
   InterceptorRejected,
