@@ -8,6 +8,9 @@ export default ({ mode }) => {
     base: loadEnv(mode, process.cwd()).VITE_BASE, // 部署后的base,会挂到import.meta.env.BASE_URL上
     server: {
       port: 8088,
+      cors: true,
+      force: true,
+      hmr: true,
       host: 'localhost',
       strictPort: true, // 严格端口 true:如果端口已被使用，则直接退出，而不会再进行后续端口的尝试。
       /**
@@ -21,11 +24,14 @@ export default ({ mode }) => {
         }
       }
     },
-    plugins: [vue()],
+    plugins: [
+      vue(),
+    ],
     resolve: {
       alias: {
         'blogex-cms': resolve(__dirname, 'src') // 设置项目根路径别名指向src
-      }
+      },
+      extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.vue', '.json'], // 扩展名
     },
     css: {
       preprocessorOptions: {

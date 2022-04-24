@@ -3,21 +3,18 @@ import { Method, AxiosRequestConfig } from 'axios';
 import { request } from './index';
 import { Request } from 'blogex-cms/services/requests/request';
 import { Response, ResultInterface } from 'blogex-cms/services/requests/types';
-export interface VerifySliderCodeResponse {
-    expireTime: number,
+export interface VerifySliderCodeResult {
+    expireTime?: number,
     originalImage: string,
     slidingImage: string,
-    xWidth: number,
-    yHeight: number
+    xWidth: number | null,
+    yHeight: number | null
 }
 /**
  * @description 获取滑块验证码
  */
-const verifySliderCode = async (): Promise<Request<AxiosRequestConfig, ResultInterface<VerifySliderCodeResponse>>> => {
-    return await request<AxiosRequestConfig, ResultInterface<VerifySliderCodeResponse>>({
+export const verifySliderCode = async (): Promise<Request<AxiosRequestConfig, ResultInterface<VerifySliderCodeResult>>> => {
+    return await request<AxiosRequestConfig, ResultInterface<VerifySliderCodeResult>>({
         url: API_URL.USER.verifySliderCode,
     });
-}
-export {
-    verifySliderCode
 }
